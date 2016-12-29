@@ -1,0 +1,57 @@
+body{
+	background: #FFFBF1; /*FFFAFA; /*#9999CC;*/
+}
+hr{
+	border: 0;
+	width: 35%;
+	background: #ccc;
+	height: 1px;
+	margin: auto;
+}
+#testFooter{
+	width: 40%;
+	margin: 0px auto;
+	text-shadow: 0 1px 0px #ccc;
+	text-align: center;
+	font: 14px 'Lucida Grande','Lucida Sans Unicode','Helvetica Neue',Helvetica,Arial,Verdana,sans-serif;
+}
+ul.testNav{
+	overflow: auto;
+	list-style-type: none;
+	padding: 5px;
+	margin: 0px;
+}
+ul.testNav li{
+	margin: 0 24px;
+	display: inline;
+}
+a{
+	color: #4F4F2F;
+}
+
+#treeLayout a, #testFooter a, a:visited, a:hover{
+	color: black;
+	text-decoration: none;
+	outline: 0;
+}
+
+.node{
+	cursor: pointer;
+}
+
+.node circle{
+	stroke: #CDF4F1; /*8DB6CD; /*#3366CC;*/
+	fill: #FFBFD2;/*82CFFD; /*#00CCFF;*/
+	stroke-width: 20px;
+	
+}
+.node text{	
+	font-family: 'PT Sans', sans-serif;/* 'Lucida Grande','GraublauWebRegular','Myriad Pro','Helvetica Neue',Arial,Helvetica,sans-serif;*/
+	font-weight: normal;
+	fill: #353535;
+}
+.link{
+	fill: none;
+	stroke: #ccc;
+	stroke-width: 2px;
+}

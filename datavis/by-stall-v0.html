@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+  <head>
+    <style>
+      body{
+        padding-top: 10px;
+        margin-left: 100px;
+      }
+      button{
+        cursor: pointer;
+        padding: 5px;
+        margin-right: 5px;
+      }
+      button>a, button>a:hover{
+        text-decoration: none;
+        color: #333;
+      }
+      .console {
+        float: left;
+        font: 10px sans-serif;
+        padding: 20px;
+        text-align: center;
+        width: 960px;
+      }
+      rect.bordered {
+        stroke: #E6E6E6;
+        stroke-width:2px;   
+      }
+
+      text.mono {
+        font-size: 9pt;
+        font-family: Consolas, courier;
+        fill: #aaa;
+      }
+
+      text.axis-workweek {
+        fill: #000;
+      }
+
+      text.axis-worktime {
+        fill: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="console">
+      <button onclick="window.location='datavis.html'">Back to site</button>
+      <button onclick="window.location='ext-flow-v1.html'">External Flow</button>
+      <button onclick="window.location='by-crowd-v1.html'">By Crowd</button>
+      <button onclick="window.location='purchase-track-v0.html'">Purchase Track</button>
+      <button onclick="window.location='by-stall-v0.html'">By Stall</button>
+      <p>Colours based on quantile scale.</p>
+    </div>
+    <br><br>
+    <div id="chart"></div>
+    <script type="text/javascript" src="../js/d3.v3.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../js/by-stall-v0.js"></script>
+  </body>
+</html>

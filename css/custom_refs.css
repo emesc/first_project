@@ -1,0 +1,114 @@
+html{
+	position: relative;
+	min-height: 100%;
+	-webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat-regular-webfont.eot'); 
+    src: url('../fonts/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/montserrat-regular-webfont.svg#montserrat-regular-webfont') format('svg'),
+         url('../fonts/montserrat-regular-webfont.woff') format('woff'),
+         url('../fonts/montserrat-regular-webfont.ttf')  format('truetype');
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+      font-family: 'Montserrat';
+      src: url(../fonts/montserrat-regular-webfont.svg#montserrat-regular-webfont) format(‘svg’);
+  }
+}
+
+body{
+	padding-top: 120px;
+	font-family: 'Montserrat', 'PT Sans', sans-serif, helvetica;
+	background: #081724; /*282828;*/
+	margin-bottom: 60px;	/*for the footer*/
+}
+
+.navbar{
+	background: #D0DCD0;
+}
+
+.navbar a:focus, .navbar li a:focus{
+	outline: none;
+	text-decoration: none;
+	background: #D0DCD0;
+}
+
+.icon-bar {
+  background-color: #B0C4DE;
+}
+
+#first-nav a, .second-nav a{
+	color: #404040;
+}
+
+.second-nav > li.active a{
+	border-radius: 5px;
+	background-color: #98C5BE;
+}
+
+.second-nav li a:hover{
+	border-radius: 5px;
+	background-color: #BCC8C8;
+	color: black;
+}
+
+#first-nav a:hover{
+	text-decoration: none;
+	color: black;
+}
+
+#first-nav{
+	padding-top: 0;
+	padding-left: 15px;
+	font-size: 40px;
+	letter-spacing: 1px;
+}
+
+.second-nav{
+	float: right;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 14px;
+}
+
+.second-nav li{
+	padding: 10px 10px 0 0;
+}
+/*.thumbnail{
+	background-color: #FFFFE6;
+}*/
+
+.example-title{
+	color: #F5EED2;
+}
+
+.thumbnail{
+	padding-top: 15px;
+}
+
+.thumbnail > img{
+	height: 180px;
+}
+
+.thumbnail a:focus{
+	outline: none;
+	text-decoration: none;
+}
+
+#footer{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 60px;
+	background-color: #589494;
+}
+
+#footer p{
+	text-align: center;
+	padding-top: 20px;
+}
+

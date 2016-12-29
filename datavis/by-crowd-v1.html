@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <meta content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0' name='viewport'>
+
+  <title>Internal Crowd</title>
+  <link href='../css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+  <link href='../css/dc.css' rel='stylesheet' type='text/css'>
+
+  <style type="text/css">
+      body{
+        padding-top: 10px;
+        margin-left: 50px;
+      }
+      button{
+        cursor: pointer;
+        padding: 5px;
+        margin-right: 5px;
+      }
+      button>a, button>a:hover{
+        text-decoration: none;
+        color: #333;
+      }
+      a:hover{
+        text-decoration: none;
+      }
+      .chart {
+        float: left;
+        font: 10px sans-serif;
+        /*padding: 20px;*/
+        text-align: center;
+      }
+  </style>
+</head>
+
+<body>
+  <div class="console">
+    <button onclick="window.location='datavis.html'">Back to site</button>
+    <button onclick="window.location='ext-flow-v1.html'">External Flow</button>
+    <button onclick="window.location='by-crowd-v1.html'">By Crowd</button>
+    <button onclick="window.location='purchase-track-v0.html'">Purchase Track</button>
+    <button onclick="window.location='by-stall-v0.html'">By Stall</button>
+  </div>
+  <div class="container" style="margin-left: 20px;">
+    <h2>Record from 13 to 17 June 2014<a href="javascript:dc.filterAll(); dc.renderAll();" style="color:steelblue" class="reset"> | Reset All</a></h3></h2>
+    <p>Graphs are based on dummy data so even closed hours have entries.</p>
+    <p>Brushing on line and bar graphs is enabled to filter the data table below. Ring chart shows the number of entries on the table. Click on a pie to filter per mall.</p>
+    <div class="row">
+      <div id="crowdPerHour-lineChart">
+        <strong>Crowd per Hour</strong>
+        <div class="clearfix"></div>
+      </div>
+      <div id="crowdPerMall-ringChart" style="margin-left:30px">
+        <strong># of Records per Mall</strong>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div id="byGender-barChart">
+        <strong>Crowd By Gender</strong>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div id="crowdType-lineChart">
+        <strong>Crowd Category</strong>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div id="dataTable">
+        <table class="table table-hover" id="data-table">
+            <thead>
+              <tr class="header">
+                <th>TIMESTAMP</th>
+                <th>MALL</th>
+                <th>TOTAL</th>
+                <th>MALE</th>
+                <th>FEMALE</th>
+                <th>CHILD</th>
+                <th>STUDENT</th>
+                <th>ADULT</th>
+              </tr>
+            </thead>
+        </table>
+      </div>
+    </div>
+  </div>
+  <!-- <div id=""></div> -->
+  <script src='../js/jquery-1.11.0.js' type='text/javascript'></script>
+  <script src='../js/d3.min.js' type='text/javascript'></script>
+  <script src='../js/crossfilter.js' type='text/javascript'></script>
+  <script src='../js/dc.js' type='text/javascript'></script>
+  <script src='../js/bootstrap.min.js' type='text/javascript'></script>
+  <script>
+    d3.json("../data/crowd-v2.json", function(error,data){
+
+      var crowdLineChart = dc.lineChart("#crowdPerHour-lineChart");
+      var genderBarChart = dc.barChart("#byGender-barChart");
+      var typeLineChart = dc.lineChart("#crowdType-lineChart");
+      var mallRingChart = dc.pieChart("#crowdPerMall-ringChart");
+      var dataTable = dc.dataTable("#data-table");
+
+      var parseDate = d3.time.format("%Y-%m-%dT%H:%M:%S").parse;
+
+      data.forEach(function(d){
+        d.date = parseDate(d.timestamp.substr(0,19));
+        d.male = +d.male;
+        d.female = +d.female;
+        d.total = d.female + d.male;
+        d.mall = d.mallcode;
+        d.child = +d.child;
+        d.student = +d.student;
+        d.adult = +d.adult;
+      });
+      var ndx = crossfilter(data);
+      var all = ndx.groupAll();
+
+      var timeDim = ndx.dimension(function(d){ return d3.time.hour(d.date); });
+      var crowdGroup = timeDim.group().reduceSum(function(d){ return d.total; });
+      /*var crowdGroup = timeDim.group().reduce(
+          function(p,v){
+            //++p.count;
+            p.date = v.date;
+            p.male = v.male;
+            p.female = v.female;
+            p.total = v.total;
+            p.mall = v.mall;
+            p.child = v.child;
+            p.student = v.student;
+            p.adult = v.adult;
+            return p;
+          },
+          function(p,v){
+            //--p.count;
+            p.date = v.date;
+            p.male = v.male;
+            p.female = v.female;
+            p.total = v.total;
+            p.mall = v.mall;
+            p.child = v.child;
+            p.student = v.student;
+            p.adult = v.adult;
+            return p;
+          },
+          function(p,v){
+            return {};
+          }
+        );*/
+
+      var mallDim = ndx.dimension(function(d){ return d.mall; });
+      var mallGroup = mallDim.group().reduceCount(function(d){ return d.mall; });
+
+      var maleData = timeDim.group().reduceSum(function(d){ return d.male; });
+      var femaleData = timeDim.group().reduceSum(function(d){ return d.female; });
+
+      var childData = timeDim.group().reduceSum(function(d){ return d.child; });
+      var studentData = timeDim.group().reduceSum(function(d){ return d.student; });
+      var adultData = timeDim.group().reduceSum(function(d){ return d.adult; });
+
+      // print_filter('mallDim');
+      // print_filter('mallGroup');
+
+      var minDate = timeDim.bottom(1)[0].date;
+      var maxDate = timeDim.top(1)[0].date;
+
+      mallRingChart
+        .width(220).height(250)
+        .dimension(mallDim)
+        .group(mallGroup)
+        .ordinalColors(["#7fc97f", "#beaed4", "#fdc086", "#ffff99"])
+        .legend(dc.legend().x(70).y(90).itemHeight(13).gap(5))
+        .innerRadius(80)
+        .renderLabel(false);
+
+      crowdLineChart
+        .width(900).height(250)
+        .margins({top: 10, right: 10, bottom: 40, left: 40})
+        .dimension(timeDim)
+        .group(crowdGroup)
+        //.brushOn(false)
+        // .keyAccessor(function(p){ return p.value.date; })
+        // .valueAccessor(function(p){ return p.value.total; })
+        .x(d3.time.scale().domain([minDate, maxDate]))
+        .renderHorizontalGridLines(true)
+        .renderVerticalGridLines(true)
+        .yAxisLabel("Population")
+        .xAxisLabel("Time of the day");
+
+      genderBarChart
+        .width(900).height(250)
+        .margins({top: 10, right: 10, bottom: 40, left: 40})
+        .dimension(timeDim)
+        .group(maleData, "male")
+        .stack(femaleData, "female")
+        .centerBar(true)  
+        .gap(0.1)
+        .x(d3.time.scale().domain([minDate, maxDate]))
+        .xUnits(function(){ return 200; })
+        .elasticY(true)
+        .renderHorizontalGridLines(true)
+        .legend(dc.legend().x(80).y(10).itemHeight(13).gap(5))
+        .ordinalColors(["#377eb8", "#e7298a"])
+        .yAxisLabel("Population")
+        .xAxisLabel("Time of the day");
+        //.brushOn(false)
+        //.title(function(d){ return d.key + "+\nCrowd total: " + d.value; });
+        /*.title(function(d){
+          return d.key
+                      + "\nMale population: " + d.male
+                      + "\nFemale population: " + d.female;
+        });*/
+        //.tickFormat(function(v) {return v;});
+
+      typeLineChart
+        .width(900).height(250)
+        .margins({top: 10, right: 10, bottom: 40, left: 40})
+        .dimension(timeDim)
+        .group(childData, "child")
+        .stack(studentData, "student")
+        .stack(adultData, "adult")
+        .renderArea(true)
+        .x(d3.time.scale().domain([minDate, maxDate]))
+        .legend(dc.legend().x(80).y(10).itemHeight(13).gap(5))
+        .renderHorizontalGridLines(true)
+        //.brushOn(false)
+        .ordinalColors(["#FFC0A9", "#FF8598", "#7D8A2E"])
+        .yAxisLabel("Population")
+        .xAxisLabel("Time of the day");
+
+      dataTable
+        .width(1000).height(800)
+        .dimension(timeDim)
+        .group(function(d){ return "Crowd record from 13-17 June 2014: display shows max of 50 entries at a time; brush on the graph to see specific data"; })
+        .size(50)
+        .columns([
+            function(d){ return d.date; },
+            function(d){ return d.mall; },
+            function(d){ return d.total; },
+            function(d){ return d.male; },
+            function(d){ return d.female; },
+            function(d){ return d.child; },
+            function(d){ return d.student; },
+            function(d){ return d.adult; }
+          ])
+        .sortBy(function(d){ return d.date; })
+        .order(d3.ascending);
+
+      dc.renderAll();
+
+      //print_filter('data');
+
+      // function print_filter(filter){
+      //   var f=eval(filter);
+      //   if (typeof(f.length) != "undefined") {}else{}
+      //   if (typeof(f.top) != "undefined") {f=f.top(Infinity);}else{}
+      //   if (typeof(f.dimension) != "undefined") {f=f.dimension(function(d) { return "";}).top(Infinity);}else{}
+      //   console.log(filter+"("+f.length+") = "+JSON.stringify(f).replace("[","[\n\t").replace(/}\,/g,"},\n\t").replace("]","\n]"));
+      // } 
+    })
+  
+  </script>
+    
+</body>
+</html>

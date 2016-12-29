@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/d3.parsets.css">
+    <style>
+      body{
+        padding-top: 30px;
+        padding-left: 33px;
+        margin-left: 100px;
+      }
+      button{
+        cursor: pointer;
+        padding: 5px;
+        margin-right: 5px;
+      }
+      button>a, button>a:hover{
+        text-decoration: none;
+        color: #333;
+      }
+      .console {
+        float: left;
+        font: 10px sans-serif;
+        padding: 20px;
+        text-align: center;
+        width: 960px;
+      }
+      /* for sankey */
+      .node rect {
+        cursor: move;
+        fill-opacity: .9;
+        shape-rendering: crispEdges;
+      }
+
+      .node text {
+        pointer-events: none;
+        text-shadow: 0 1px 0 #fff;
+      }
+
+      .link {
+        fill: none;
+        stroke: #000;
+        stroke-opacity: .2;
+      }
+
+      .link:hover {
+        stroke-opacity: .5;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="console">
+      <button onclick="window.location='datavis.html'">Back to site</button>
+      <button onclick="window.location='ext-flow-v1.html'">External Flow</button>
+      <button onclick="window.location='by-crowd-v1.html'">By Crowd</button>
+      <button onclick="window.location='purchase-track-v0.html'">Purchase Track</button>
+      <button onclick="window.location='by-stall-v0.html'">By Stall</button>
+      <br><br>
+      <h2><strong>A summary for a day</strong></h2>
+    </div>
+    <br><br>
+      
+    <div id="sankeyChart"></div>
+    <script type="text/javascript" src="../js/d3.v3.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../js/sankey.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../js/purchase-track-v0.js"></script>
+  </body>
+</html>

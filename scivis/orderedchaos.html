@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/bootstrap.min.css" media="screen">
+	<link rel="stylesheet" href="../css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" href="../css/custom_sciVis.css">
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+	<script src="../js/html5shiv.js"></script>
+	<script src="../js/respond.min.js"></script>
+	<title>curlycoderme</title>
+</head>
+<body>
+	<!-- navigation -->
+	<div class="navbar navbar-fixed-top" role="navigation">
+      	<div class="navbar-header" id="dashboard_00">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <h1 id="first-nav"><a href="../../index.html">curlycoderme</a></h1>
+        </div>
+      	<div class="collapse navbar-collapse">
+	        <ul class="nav navbar-nav second-nav">
+	          <li><a href="../index.html">Home</a></li>
+	          <li><a href="../datavis/datavis.html">Data Vis</a></li>
+	          <li class="active"><a href="scivis.html">Sci Vis</a></li>
+	          <li><a href="../hobbies/photography.html">Hobbies</a></li>
+	          <li><a href="../travel/travel.html">Travel</a></li>
+	          <li><a href="../blog/blog.html">Blog</a></li>
+	          <li><a href="https://github.com/curlycoderme" target="_blank">Github</a></li>
+	          <li><a href="../refs.html">References</a></li>
+	          <li><a href="../contact.html">Contact</a></li>
+	        </ul>
+		</div>
+	</div>
+		
+	<div class="container entry">
+		<!-- sidebar -->
+		<div class="row">
+			<aside class="col-lg-2 col-sm-4">
+				<h3>Science Visualization</h3>
+				<ul class="nav nav-pills nav-stacked">
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Astronomy <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="coloursnightsky.html">Colours in the night sky</a></li>
+							<li><a href="queryingnightsky.html">Querying the night sky</a></li>
+						</ul>
+					</li>
+					<li class="active dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Mathematics <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="orderedchaos.html">Ordered chaos</a></li>
+							<li><a href="fractals.html">Self-similarity in fractals</a></li>
+							<li><a href="cantor.html">The grand Cantor</a></li>
+							<li><a href="fractaltree.html">A fractal tree</a></li>
+							<li><a href="recursivesq.html">Recursive squares</a></li>
+							<li><a href="sine.html">The sine and cosine problem</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Effects <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="noise.html">The subtlety of noise</a></li>
+							<li><a href="fierydots.html">Fiery dots</a></li>
+						</ul>
+					</li>
+				</ul>
+			</aside>
+
+			<article class="col-lg-9 col-sm-7 col-lg-offset-1 col-sm-offset-1">
+				<div class="clearfix visible-xs visible-lg">
+					<h2>Mandelbrot set: The ordered chaos</h2>
+        			<br><br>
+        			<p>
+					<blockquote style="font-size: 15px">
+						The most complicated mathematical object in the universe; yet it is based on simple mathematical iteration. 
+					<br>
+					- <a href="http://www.poetrylibrary.edu.au/poets/mcmaster-rhyll/living-in-the-mandelbrot-set-0749051" target="_blank"><em>Rhyll McMaster</em></a>
+					</blockquote>
+					</p>
+					<center><embed width="560" height="315" src="http://www.youtube.com/v/Ehwy4Gq27uY?rel=0" type="application/x-shockwave-flash"></embed></center>
+					<br><br><br>
+					<p>
+						Amazing, ain't it? This is not what you typically see in basic geometry lessons where we spent months talking about points, lines (the shortest path between points), circles, squares and triangles. This branch is actually referred to as Euclidean geometry in honor of Euclid, a Greek mathematician. 
+					</p>
+					<p>
+						But complex shapes are everywhere especially when you look at real life - coastlines, ferns, stock markets. Even more so when you look closer. Weird, yes, but beautiful. Suddenly, Euclidean geometry seems useless to describe these ones. This is where <bold>fractals</bold> come in.
+					</p>
+					<p>
+						Watching the video above lets you know how the term 'fractal' was coined. The Mandelbrot set is a class of fractal sets and was first discovered/visualized by Benoit Mandelbrot, a French and American mathematician.
+					</p>
+					<p>
+						The basic formula of a Mandelbrot set is expressed as <em><strong>f(x) = x<sup>2</sup> + c</strong></em>. Aaaand I will stop here then point you to the large fractals repo from <a href="http://classes.yale.edu/fractals/" target="_blank">Yale University</a> which are more comprehensive.
+					</p>
+					<p>
+						Happy reading!
+					</p>
+					<p>
+						How can I end this page without a Mandelbrot visualization. Sorry if this drags your CPU :(.
+						Refresh page to restart animation. (WIP: Button to restart animation.)
+					</p>
+					<div class="row">
+						<div class="col-md-6">
+							<br>
+							<script src="../js/processing-1.4.1.js"></script> 
+							<canvas data-processing-sources="../pde/mandelbrot/mandelbrot.pde"></canvas>
+						</div>
+						<div class="col-md-6">
+							<p>
+								Here's the snapshot of the last frame.
+								<img src="../img/at256.png" alt="Last frame of animated Mandelbrot Set">
+							</p>
+						</div>
+					</div>
+					<br>
+					<br>
+		            
+				</div>
+			</article>
+		</div> <!-- end row -->
+		
+
+	</div> <!-- end container -->
+	<br><br>
+	<div id="footer" class="entryfooter">
+		<div class="col-md-10 col-md-offset-1">
+			<p>Version 2 | Created 2014 by the Curly Coder unless otherwise stated.</p>
+		</div>
+	</div>
+
+	<script src="../js/jquery-1.11.0.js" type="text/javascript"></script>
+	<script src="../js/bootstrap.min.js"></script>
+		
+</body>
+</html>

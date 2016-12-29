@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/bootstrap.min.css" media="screen">
+	<link rel="stylesheet" href="../css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" href="../css/custom_sciVis.css">
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+	<script src="../js/html5shiv.js"></script>
+	<script src="../js/respond.min.js"></script>
+	<title>curlycoderme</title>
+</head>
+<body>
+	<!-- navigation -->
+	<div class="navbar navbar-fixed-top" role="navigation">
+      	<div class="navbar-header" id="dashboard_00">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <h1 id="first-nav"><a href="../../index.html">curlycoderme</a></h1>
+        </div>
+      	<div class="collapse navbar-collapse">
+	        <ul class="nav navbar-nav second-nav">
+	          <li><a href="../index.html">Home</a></li>
+	          <li><a href="../datavis/datavis.html">Data Vis</a></li>
+	          <li class="active"><a href="scivis.html">Sci Vis</a></li>
+	          <li><a href="../hobbies/photography.html">Hobbies</a></li>
+	          <li><a href="../travel/travel.html">Travel</a></li>
+	          <li><a href="../blog/blog.html">Blog</a></li>
+	          <li><a href="https://github.com/curlycoderme" target="_blank">Github</a></li>
+	          <li><a href="../refs.html">References</a></li>
+	          <li><a href="../contact.html">Contact</a></li>
+	        </ul>
+		</div>
+	</div>
+		
+	<div class="container entry">
+		<!-- sidebar -->
+		<div class="row">
+			<aside class="col-lg-2 col-sm-4">
+				<h3>Science Visualization</h3>
+				<ul class="nav nav-pills nav-stacked">
+					<li class="active dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Astronomy <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="coloursnightsky.html">Colours in the night sky</a></li>
+							<li><a href="queryingnightsky.html">Querying the night sky</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Mathematics <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="orderedchaos.html">Ordered chaos</a></li>
+							<li><a href="fractals.html">Self-similarity in fractals</a></li>
+							<li><a href="cantor.html">The grand Cantor</a></li>
+							<li><a href="fractaltree.html">A fractal tree</a></li>
+							<li><a href="recursivesq.html">Recursive squares</a></li>
+							<li><a href="sine.html">The sine and cosine problem</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Effects <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="noise.html">The subtlety of noise</a></li>
+							<li><a href="fierydots.html">Fiery dots</a></li>
+						</ul>
+					</li>
+				</ul>
+			</aside>
+
+			<article class="col-lg-9 col-sm-7 col-lg-offset-1 col-sm-offset-1">
+				<div class="clearfix visible-xs visible-lg">
+					<h2>Colours in the night sky</h2>
+        			<br><br>
+        			<p><em>The Sloan Digital Sky Server (SDSS) posed some challenges on their site for both teachers and students. All solutions to the exercises are from yours truly.</em></p>
+					<p>If you love the night sky, you will easily love the amazingly different colours that stars emit.</p>
+					<br>
+					<center>
+						<img src="../img/stars.png" alt="stars">
+						<p>Four star colours as captured by the <a href="http://cas.sdss.org/dr7/en/tools/chart/navi.asp" target="_blank">SDSS</a>.</p>
+					</center>
+					<br>
+					<p>
+						But with all the range of colours that these stars can take, how do we make sense of them? On the image above, the bigger star on the right looks red to me. But for some, it might be orange-ish. That’s because determining the colour of something is subjective. It is because of this that astronomers (scientist or student <strike>who studies astronomy</strike> who studies the universe and the celestial bodies existing in it) devised a way for everyone to agree on the definition of colour – to create a single measurement to compare the colours of various stars.
+					</p>
+					<p>
+						Before we go star hunting, we need to know the parameters that can help us:
+					</p>
+					<dl>
+						<dt>type</dt>
+							<dd>
+								not all you see shining in the night sky are stars, some of them are galaxies
+							</dd>
+							<dd>
+								this item will tell us what sort of object we are looking at
+							</dd>
+						<dt>location</dt>
+							<dd>
+								gives the object’s location in the sky through ra and dec
+							</dd>
+						<dt>ra</dt>
+							<dd>
+								right ascension
+							</dd>
+							<dd>
+								like longitude in the sky
+							</dd>
+						<dt>dec</dt>
+							<dd>
+								declination
+							</dd>
+							<dd>
+								like latitude in the sky
+							</dd>
+						<dt>magnitudes</dt>
+							<dd>
+								measures the brightness of an object
+							</dd>
+							<dd>
+								the SDSS camera measures how bright the object it is looking at in 5 different coloured filters namely u, g, r, i and z
+							</dd>
+						<dt>u</dt>
+							<dd>
+								ultraviolet wavelength
+							</dd>
+							<dd>
+								the invisible light that causes sunburns
+							</dd>
+						<dt>g</dt>
+							<dd>
+								green wavelength
+							</dd>
+						<dt>r</dt>
+							<dd>
+								red wavelength
+							</dd>
+						<dt>i</dt>
+							<dd>
+								shorter infrared (IR) wavelength
+							</dd>
+							<dd>
+								you can’t see IR colour but this generates heat that is hotter than ordinary light 
+							</dd>
+							<dd>
+								(i.e., light from an IR lamp feels hotter than the light from a typical lamp with a typical bulb)
+							</dd>	
+						<dt>z</dt>
+							<dd>
+								farther infrared wavelength
+							</dd>
+					</dl>
+					<br>
+					<h5>Explore 1</h5>
+					<p>
+						Using the SS Navigation Tool, random 15 stars where chosen. Summarised in this <a href="../data/scivis/explore1.xls">file</a> are the location and magnitude, together with colour as how I see it.
+					</p>
+					<br>
+					<h5>Explore 2</h5>
+					<p>
+						I tried to sort the data by u, g, r, i and z then by u-g, g-r, r-i and i-z. Only <em>u-g</em> made sense to me considering the way I described the stars by colour.
+					</p>
+					<p>
+						This shows that it is difficult to describe the colour of a star through individual filters. But when you take the difference in magnitude between two filters, then you will see that stars with similar colours are very close in values.
+					</p>
+					<p>
+						This is how astronomers classify colour. They can take any difference between two magnitudes (u-g, g-r, r-i and i-z). Remember this when the experts talk about colour. Unless they’re communicating to the general public, it’s not usual for them to describe a star’s colour as ‘reddish’ or ‘bluish’ but they would rather say ‘it has a u-g colour of  1.5’.
+					</p>
+					<p>
+						But wait, there’s more. Note that when it comes to the magnitude scale (logarithmic), lower numbers refer to brighter objects while higher numbers are to fainter objects. This may be counterintuitive but that’s the way the early astronomers have used the scale. And the rest followed.
+					</p>
+					<p>
+						An increase in the value of the magnitude corresponds to a decrease in brightness by a factor of 2.51; i.e., a magnitude 1 object is 2.51 times brighter than a magnitude 2 object and a magnitude 2 object is 2.51 times brighter than a magnitude 3 object. How bright then is magnitude 1 as compared to magnitude 3?
+					</p>
+					<br>
+					<br>
+		            
+				</div>
+			</article>
+		</div> <!-- end row -->
+		
+
+	</div> <!-- end container -->
+	<br><br>
+	<div id="footer" class="entryfooter">
+		<div class="col-md-10 col-md-offset-1">
+			<p>Version 2 | Created 2014 by the Curly Coder unless otherwise stated.</p>
+		</div>
+	</div>
+
+	<script src="../js/jquery-1.11.0.js" type="text/javascript"></script>
+	<script src="../js/bootstrap.min.js"></script>
+
+</body>
+</html>

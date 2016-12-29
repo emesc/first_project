@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>Chord Diagram as a Chart</title>
+    <style type="text/css">
+    	body{
+    		padding-top: 10px;
+    		margin-left: 100px;
+    	}
+    	button{
+    		cursor: pointer;
+    		padding: 5px;
+    		margin-right: 5px;
+    	}
+    	button>a, button>a:hover{
+    		text-decoration: none;
+    		color: #333;
+    	}
+    	#tooltip {
+	        color: white;
+	        opacity: .9;
+	        background: #333;
+	        padding: 5px;
+	        border: 1px solid lightgrey;
+	        border-radius: 5px;
+	        position: absolute;
+	        z-index: 10;
+	        visibility: hidden;
+	        white-space: nowrap;
+	        pointer-events: none;
+	      }
+	      #circle circle {
+	        fill: none;
+	        pointer-events: all;
+	      }
+	      path.group {
+	        fill-opacity: .8;
+	      }
+	      path.chord {
+	        fill-opacity: .8;
+	        stroke: #000;
+	        stroke-width: .25px;
+	      }
+	      #circle:hover path.fade {
+	        display: none;
+	      }
+	    .chord path {
+	      fill-opacity: .67;
+	      stroke: #000;
+	      stroke-width: .5px;
+	    }
+	    .chart {
+	      float: left;
+	      font: 10px sans-serif;
+	      padding: 20px;
+	      text-align: center;
+	      width: 980px;
+	    }
+
+	    /* for brush slider */
+		.axis {
+		  font: 10px sans-serif;
+		  -webkit-user-select: none;
+		  -moz-user-select: none;
+		  user-select: none;
+		}
+
+		.axis .domain {
+		  fill: none;
+		  stroke: #000;
+		  stroke-opacity: .3;
+		  stroke-width: 10px;
+		  stroke-linecap: round;
+		}
+
+		.axis text{
+			font: 14px sans-serif;
+		}
+
+		.axis .halo {
+		  fill: none;
+		  stroke: #ddd;
+		  stroke-width: 8px;
+		  stroke-linecap: round;
+		}
+
+		.slider .handle {
+		  fill: #fff;
+		  stroke: #000;
+		  stroke-opacity: .5;
+		  stroke-width: 1.25px;
+		  pointer-events: none;
+		}
+    </style>
+</head>
+<body>
+	<div class="chart">
+		<button onclick="window.location='datavis.html'">Back to site</button>
+		<button onclick="window.location='ext-flow-v1.html'">External Flow</button>
+		<button onclick="window.location='by-crowd-v1.html'">By Crowd</button>
+		<button onclick="window.location='purchase-track-v0.html'">Purchase Track</button>
+		<button onclick="window.location='by-stall-v0.html'">By Stall</button>
+		<p>The time dimension below is not yet linked to the diagram. Mouse over the arcs and chords for info.</p>
+		<div id="ext-chart"></div>
+		<div id="tooltip"></div>
+		<div id="brush-slider"></div>
+	</div>
+	<script type="text/javascript" src="../js/jquery-1.11.0.js" charset="utf-8"></script>
+	<script type="text/javascript" src="../js/d3.v3.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="../js/underscore.js" charset="utf-8"></script>
+	<script type="text/javascript" src="../js/mapper.js" charset="utf-8"></script>
+	<script type="text/javascript" src="../js/ext-traffic-v1.js"></script>
+</body>
+</html>

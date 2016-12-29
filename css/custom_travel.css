@@ -1,0 +1,195 @@
+html{
+	position: relative;
+	min-height: 100%;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat-regular-webfont.eot'); 
+    src: url('../fonts/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/montserrat-regular-webfont.svg#montserrat-regular-webfont') format('svg'),
+         url('../fonts/montserrat-regular-webfont.woff') format('woff'),
+         url('../fonts/montserrat-regular-webfont.ttf')  format('truetype');
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+      font-family: 'Montserrat';
+      src: url(../fonts/montserrat-regular-webfont.svg#montserrat-regular-webfont) format(‘svg’);
+  }
+}
+
+body{
+	font-family: 'Montserrat', 'PT Sans', sans-serif, helvetica;
+	/*font-family: 'PT Sans', sans-serif, helvetica;*/
+	background: #F0FFEB;
+	margin-bottom: 60px;	/*for the footer*/
+}
+
+.navbar{
+	background: #000;/*BDC7D6;*/
+	opacity: 0.8;
+	margin-bottom: 0;
+}
+
+.navbar a:focus, .navbar li a:focus{
+	outline: none;
+	text-decoration: none;
+	background: #D0DCD0;
+}
+
+.icon-bar {
+  background-color: #B0C4DE;
+}
+
+#first-nav a, .second-nav a{
+	color: #1E1E1E;
+}
+
+.second-nav > li.active a{
+	border-radius: 5px;
+	background-color: #141414;/*A9B3C2;*/
+	color: #1E1E1E;
+}
+
+.second-nav li a:hover{
+	border-radius: 5px;
+	background-color: #1E1E1E;
+	color: #E4EDFA;
+}
+
+#first-nav a:hover{
+	text-decoration: none;
+	color: #fff;
+}
+
+#first-nav{
+	padding-top: 0;
+	padding-left: 15px;
+	font-size: 40px;
+	letter-spacing: 1px;
+}
+
+.second-nav{
+	float: right;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 14px;
+}
+
+.second-nav li{
+	padding: 10px 10px 0 0;
+}
+
+#entry_venice{
+	background: url(https://farm3.staticflickr.com/2921/14057361840_bb24527321_o.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#entry_paris{
+	background: url(https://farm3.staticflickr.com/2908/14240594501_a97e539b52_o.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#entry_cinque{
+	background: url(https://farm6.staticflickr.com/5536/14057286718_51f7770e14_o.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#entry_florence{
+	background: url(https://farm3.staticflickr.com/2898/14243959045_c4a19e14da_o.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#entry_amsterdam{
+	background: url(https://farm6.staticflickr.com/5558/14220774016_73c00c4260_o.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#entry_brussels{
+	background: url(https://farm3.staticflickr.com/2937/14057262148_be7b8d13e9_o.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#entry_rome{
+	background: url(https://farm3.staticflickr.com/2913/14220812666_3faff345c8_o.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#entry_tokyo{
+	background: url(https://farm4.staticflickr.com/3926/15099407961_10b76611db_o.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.florence, .amsterdam, .tokyo{
+	margin: 20px 0 20px auto;
+}
+
+.entry_gen{
+	width: 400px;
+	margin-top: 20px;
+	padding: 20px;
+	background: #000;
+	opacity: 0.8;
+	-moz-box-shadow: 0 0 20px #c5c5c5;
+	-webkit-box-shadow: 0 0 20px #c5c5c5;
+	box-shadow: 0 0 20px #c5c5c5;
+}
+
+.entry_gen h3, .entry_gen h4{
+	color: #505050;
+	opacity: 1;
+}
+
+.entry_gen p{
+	font-size: 1em;
+	color: white;
+	opacity: 0.8;
+	margin: 0 0 30px 0;
+	text-align: left;
+	letter-spacing: 1.5px;
+}
+
+a.travelLinks{
+	color: #E4EDFA;
+	font-size: 1.2em;
+	margin: auto;
+}
+
+a.travelLinks:hover{
+	text-decoration: none;
+	color: #FFFACD;
+}
+
+#footer{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 60px;
+	/*background-color: #5B6470;
+	opacity: 0.1;*/
+}

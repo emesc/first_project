@@ -1,0 +1,192 @@
+html{
+	position: relative;
+	min-height: 100%;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat-regular-webfont.eot'); 
+    src: url('../fonts/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/montserrat-regular-webfont.svg#montserrat-regular-webfont') format('svg'),
+         url('../fonts/montserrat-regular-webfont.woff') format('woff'),
+         url('../fonts/montserrat-regular-webfont.ttf')  format('truetype');
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+      font-family: 'Montserrat';
+      src: url(../fonts/montserrat-regular-webfont.svg#montserrat-regular-webfont) format(‘svg’);
+  }
+}
+
+body{
+	padding-top: 120px;
+	font-family: 'Montserrat', 'PT Sans', sans-serif, helvetica;
+	/*font-family: 'PT Sans', sans-serif, helvetica;*/
+	/*background: #F0FFEB; this is light greenish*/ 
+	background: #FAFAFA;
+	margin-bottom: 60px;	/*for the footer*/
+}
+
+.navbar{
+	background: #C0E4DA;
+}
+
+.navbar a:focus, .navbar li a:focus{
+	outline: none;
+	text-decoration: none;
+	background: #C0E4DA;
+}
+
+article a:focus{
+	outline: none;
+	text-decoration: none;
+}
+
+.icon-bar {
+  background-color: #B0C4DE;
+}
+
+#first-nav a, .second-nav a{
+	color: #6E6F73;
+}
+
+.second-nav > li.active a{
+	border-radius: 5px;
+	background-color: #B6DAD0;
+}
+
+.second-nav li a:hover{
+	border-radius: 5px;
+	background-color: #AAD6CC;
+	color: black;
+}
+
+#first-nav a:hover{
+	text-decoration: none;
+	color: black;
+}
+	
+#first-nav{
+	padding-top: 0;
+	padding-left: 15px;
+	font-size: 40px;
+	letter-spacing: 1px;
+}
+
+.second-nav{
+	float: right;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 14px;
+}
+
+.second-nav li{
+	padding: 10px 10px 0 0;
+}
+
+.navbar-default #first-nav{
+	color: #000;
+}
+
+.charts{
+	margin-top: 20px;
+}
+
+p.dropdown-menu{
+	padding: 7px;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus{
+    background-color: #68625C;
+}
+
+aside{
+	border-right: 1px solid #B0C4DE;
+}
+
+aside h3{
+	font-size: 18px;
+}
+
+article h2{
+	font-size: 30px;
+	color: #2C2C2C;
+}
+
+article h4{
+	font-size: 26px;
+	color: #686868;
+}
+
+article p{
+	padding-right: 30px;
+	font-size: 18px;
+	color: #2C2C2C;
+}
+
+.panel{
+	background-color: #E6F5E1;
+}
+
+.panel-title a{
+	color: #646464;
+	text-decoration: none;
+	outline: none;
+}
+
+.eye .glyphicon{
+	color: #505050;
+}
+
+/***************************
+* for tropical data 1213
+****************************/
+#tropical-data{
+	margin-left: 50px;
+}
+
+.bar-chart h4, .bar-chart h6{
+	text-align: center;
+}
+
+#dc-stat-chart, #dc-category-chart, #dc-wind-chart{
+	margin-left: 30px;
+}
+
+#dc-data-table{
+	font-size: 11px;
+}
+.reset:hover{
+	text-decoration: none;
+}
+
+#dataSource{
+	font-size: 9px;
+	text-align: right;
+}
+
+.v-bar {
+    min-height: 1px;
+    min-width: 30px;
+    background-color: #4682b4;
+    margin-right: 2px;
+    font-size: 10px;
+    color: #f0f8ff;
+    text-align: center;
+    width: 10px;
+    display: inline-block;
+}
+
+#footer{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 60px;
+	background-color: #FBC6C0;
+}
+
+#footer p{
+	text-align: center;
+	padding-top: 20px;
+}

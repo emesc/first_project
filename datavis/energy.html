@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/bootstrap.min.css" media="screen">
+	<link rel="stylesheet" href="../css/custom_dataVis.css">
+	<link rel="stylesheet" href="../css/sankeyStyle.css">
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+	<script src="../js/html5shiv.js"></script>
+	<script src="../js/respond.min.js"></script>
+	<title>curlycoderme</title>
+</head>
+<body>
+	<div class="container-fluid">
+		<!-- navigation -->
+		<nav class="navbar navbar-fixed-top" role="navigation">
+	      	<div class="navbar-header" id="dashboard_00">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <h1 id="first-nav"><a href="../../index.html">curlycoderme</a></h1>
+            </div>
+	      	<div class="collapse navbar-collapse">
+		        <ul class="nav navbar-nav second-nav">
+		          <li><a href="../index.html">Home</a></li>
+		          <li class="active"><a href="datavis.html">Data Vis</a></li>
+		          <li><a href="../scivis/scivis.html">Sci Vis</a></li>
+		          <li><a href="../hobbies/photography.html">Hobbies</a></li>
+		          <li><a href="../travel/travel.html">Travel</a></li>
+		          <li><a href="../blog/blog.html">Blog</a></li>
+		          <li><a href="https://github.com/curlycoderme" target="_blank">Github</a></li>
+		          <li><a href="../refs.html">References</a></li>
+		          <li><a href="../contact.html">Contact</a></li>
+		        </ul>
+			</div>
+		</nav>
+		
+		<!-- sidebar -->
+		<div class="row">
+			<aside class="col-lg-2 col-sm-4">
+				<h3>Data Visualization</h3>
+				<ul class="nav nav-pills nav-stacked">
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dashboards <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="tropicaldata1213.html">Western Pacific: Tropical Data 2013</a></li>
+							<li><a href="aaa.html">Aviation accidents and incidents</a></li>
+							<li><a href="nba1213.html">NBA Team Stats (2012-2013)</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Geomaps <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="usco2emissions.html">US CO2 Emissions</a></li>
+							<li><a href="countriescodes.html">Countries, codes and pops</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Multidimensional Plot <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="mvp1314.html">NBA MVP 2013-14</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Force Layout <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="carbon.html">C is for Carbon!</a></li>
+						</ul>
+					</li>
+					<li class="active dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Sankey Diagram <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="energy.html">Energy</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Bar Graph <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="usshutdown.html">US Shutdown 2013</a></li>
+							<li><a href="nball1314.html">NBA League Leaders 2013-2014</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Bubble Chart <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="sexualsat.html">Sexual Satisfaction per capita GDP</a></li>
+							<li><a href="dots_aapl.html">AAPL Closing Q1</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Line Graph <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="line_07.html">Updating data</a></li>
+							<li><a href="line_06.html">Date format</a></li>
+							<li><a href="line_05.html">Playing with axis tick labels</a></li>
+							<li><a href="line_04.html">Separate axes</a></li>
+							<li><a href="line_03.html">Two independent vars v1</a></li>
+							<li><a href="line_02.html">Zoomed in</a></li>
+							<li><a href="line_01.html">Two independent vars v0</a></li>
+							<li><a href="line_00.html">One independent var</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Testing 123 <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="randarboretum.html">Random Arboretum</a></li>
+							<li><a href="nvd3scatter.html">Scatterplot sample</a></li>
+						</ul>
+					</li>
+				</ul>
+			</aside>
+
+			<!-- content -->
+			<article class="col-lg-9 col-sm-7 col-lg-offset-1 col-sm-offset-1">
+				<!-- <div class="clearfix visible-xs visible-lg"> -->
+					<h2>Sankey diagram</h2>
+        			<h4>a control flow diagram</h4>
+        			<br>
+        			<!-- <p><i>This page works best with Firefox.</i></p> -->
+        			<br>
+		            <p>Recently, the <a href="http://www.nytimes.com/2014/02/12/business/international/improving-energy-efficiency-in-supercomputers.html?_r=0" target="_blank">New York Times</a> posted a news about a supercomputer in Tokyo Institute of Technology being submerged in liquids in order to keep the electricity bill down. Apparently, no harm is done on the machine. This is no new news. A lot of efforts like this have been done all over the world. One of it is using <a href="http://hackedgadgets.com/2008/10/24/computer-cooled-using-a-mineral-oil-filled-fish-tank/#section6" target="_blank">mineral oil</a> to keep the computer's temperature down.</p>
+			        <p>Energy consumption has always been a hot topic. So let me dive in.</p>
+			        <p>I tried to rummage around the interwebs to see a good dataset. One site led to another and I was able to catch a <a href="https://www.gov.uk/government/publications/energy-consumption-in-the-uk" target="_blank">good one</a>. The thing is the data still has to be cleaned up for me to be able to use it with d3. Good news, <a href="http://openrefine.org/" target="_blank">OpenRefine</a> is there to help.</p>
+			        <br><br>
+			        <center><a href="http://openrefine.org/" target="_blank"><img src="../img/gRefine.png" alt="OpenRefine"></a></center>
+			        <br><br>
+			        <p>With its <a href="http://enipedia.tudelft.nl/wiki/OpenRefine_Tutorial" target="_blank">wiki tutorial</a>, I was able to get what I need.</p>
+			        <p>One way that this can be visualised is through a <a href="http://en.wikipedia.org/wiki/Sankey_diagram" target="_blank">Sankey diagram</a>. Perhaps the most famous example of this is Charles Minard's Map of Napoleon's Russian Campaign of 1812 where the flow map is overlayed on a geographical map.</p>
+			        <br><br>
+			        <center><img src="../img/minard.png" alt="Minard's diagram"></center>
+			        <br><br>
+			        <p>Here's my interactive result with nodes that can be dragged. You can also hover your mouse on the links to see which goes into where.</p>
+			        <br><br>
+			        <center><a href="https://www.gov.uk/government/publications/energy-consumption-in-the-uk" target="_blank"><p><strong>UK: Overall energy consumption for heat and other end uses by fuel 2012 - provisional estimate</strong></p></a></center>
+		            <div id="energy"></div>
+		            <br>
+				<!-- </div> -->
+			</article>
+		</div>
+	</div>
+
+	<div id="footer">
+		<div class="container">
+			<!-- <div class="col-md-6 col-sm-offset-3"> -->
+				<p>Version 2 | Created 2014 by the Curly Coder unless otherwise stated.</p>
+			<!-- </div> -->
+		</div>
+	</div>
+
+	<script type="text/javascript" src="../js/d3.v3.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../js/sankey.js"></script>
+    <script type="text/javascript" src="../js/energy.js"></script>
+
+	<script src="../js/jquery-1.11.0.js" type="text/javascript"></script>
+	<script src="../js/bootstrap.min.js"></script>
+
+	
+	
+</body>
+</html>

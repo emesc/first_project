@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Testing brush links</title>
+	<style>
+		div{ display: inline; }
+	</style>
+</head>
+<body>
+	<div id="series-chart"></div>
+	<div id="pie-chart"></div>
+	<div id="row-chart"></div>
+
+	<script src='../js/jquery-1.11.0.js' type='text/javascript'></script>
+  <script src='../js/d3.min.js' type='text/javascript'></script>
+  <script src='../js/crossfilter.js' type='text/javascript'></script>
+  <script src='../js/dc.js' type='text/javascript'></script>
+  <script src='../js/bootstrap.min.js' type='text/javascript'></script>
+	<script>
+		var data = crossfilter([
+		  {date: "2011-11-14T16:17:54Z", quantity: 2, total: 190, tip: 100, type: "tab"},
+		  {date: "2011-11-14T16:20:19Z", quantity: 2, total: 190, tip: 100, type: "tab"},
+		  {date: "2011-11-14T16:28:54Z", quantity: 1, total: 300, tip: 200, type: "visa"},
+		  {date: "2011-11-14T16:30:43Z", quantity: 2, total: 90, tip: 0, type: "tab"},
+		  {date: "2011-11-14T16:48:46Z", quantity: 2, total: 90, tip: 0, type: "tab"},
+		  {date: "2011-11-14T16:53:41Z", quantity: 2, total: 90, tip: 0, type: "tab"},
+		  {date: "2011-11-14T16:54:06Z", quantity: 1, total: 100, tip: 0, type: "cash"},
+		  {date: "2011-11-14T16:58:03Z", quantity: 2, total: 90, tip: 0, type: "tab"},
+		  {date: "2011-11-14T17:07:21Z", quantity: 2, total: 90, tip: 0, type: "tab"},
+		  {date: "2011-11-14T17:22:59Z", quantity: 2, total: 90, tip: 0, type: "tab"},
+		  {date: "2011-11-14T17:25:45Z", quantity: 2, total: 200, tip: 0, type: "cash"},
+		  {date: "2011-11-14T17:29:52Z", quantity: 1, total: 200, tip: 100, type: "visa"}
+		]);
+
+		var typeSeriesDimension = data.dimension(function(d){ return [d.type, new Date(d.date)]; });
+		var totalGroup = typeSeriesDimension.group().reduceSum(function(d){ return d.total; });
+
+		dc.seriesChart("#series-chart")
+		    .chart(function(c) { return dc.lineChart(c).interpolate('cardinal') })
+		    .width(800)
+		    .height(200)
+		    .x(d3.time.scale().domain([new Date("2011-11-14T16:15:00Z"), new Date("2011-11-14T17:30:00Z")]))
+		    .dimension(typeSeriesDimension)
+		    .group(totalGroup)
+		    .seriesAccessor(function(d) {return d.key[0];})
+		    .keyAccessor(function(d) {return d.key[1];})
+		    .valueAccessor(function(d) {return d.value;})
+		    .legend(dc.legend().x(50).y(100).itemHeight(13).gap(5));
+
+		var typeDimension1 = data.dimension(function(d){ return d.type });
+		var typeGroupCount = typeDimension1.group();
+
+		dc.pieChart("#pie-chart")
+		    .width(200)
+		    .height(200)
+		    .dimension(typeDimension1)
+		    .group(typeGroupCount);
+
+		var typeDimension2 = data.dimension(function(d){ return d.type });
+		var typeGroupTotal = typeDimension2.group().reduceSum(function(d){ return d.total; });
+
+		dc.rowChart('#row-chart')
+		    .width(600)
+		    .height(200)
+		    .dimension(typeDimension2)
+		    .group(typeGroupTotal);
+
+		dc.renderAll();
+	</script>
+</body>
+</html>

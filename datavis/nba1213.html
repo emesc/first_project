@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/bootstrap.min.css" media="screen">
+	<link rel="stylesheet" href="../css/custom_dataVis.css">
+	<link rel="stylesheet" href="../css/dc.css">
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+	<script src="../js/html5shiv.js"></script>
+	<script src="../js/respond.min.js"></script>
+	<title>curlycoderme</title>
+	<style>
+		article h2, article h5{
+			text-indent: 20px;
+		}
+		.dc-data-table{
+			font-size: 11px;
+		}
+		.table-graph, .span12{
+			 margin-top: 20px;
+		}
+		.span4{
+			overflow: hidden;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container-fluid">
+		<!-- navigation -->
+		<nav class="navbar navbar-fixed-top" role="navigation">
+	      	<div class="navbar-header" id="dashboard_00">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <h1 id="first-nav"><a href="../../index.html">curlycoderme</a></h1>
+            </div>
+	      	<div class="collapse navbar-collapse">
+		        <ul class="nav navbar-nav second-nav">
+		          <li><a href="../index.html">Home</a></li>
+		          <li class="active"><a href="datavis.html">Data Vis</a></li>
+		          <li><a href="../scivis/scivis.html">Sci Vis</a></li>
+		          <li><a href="../hobbies/photography.html">Hobbies</a></li>
+		          <li><a href="../travel/travel.html">Travel</a></li>
+		          <li><a href="../blog/blog.html">Blog</a></li>
+		          <li><a href="https://github.com/curlycoderme" target="_blank">Github</a></li>
+		          <li><a href="../refs.html">References</a></li>
+		          <li><a href="../contact.html">Contact</a></li>
+		        </ul>
+			</div>
+		</nav>
+		
+		<!-- sidebar -->
+		<div class="row">
+			<aside class="col-lg-2 col-sm-4">
+				<h3>Data Visualization</h3>
+				<ul class="nav nav-pills nav-stacked">
+					<li class="active dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dashboards <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="tropicaldata1213.html">Western Pacific: Tropical Data 2013</a></li>
+							<li><a href="aaa.html">Aviation accidents and incidents</a></li>
+							<li><a href="nba1213.html">NBA Team Stats (2012-2013)</a></li> 
+						</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Geomaps <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="usco2emissions.html">US CO2 Emissions</a></li>
+							<li><a href="countriescodes.html">Countries, codes and pops</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Multidimensional Plot <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="mvp1314.html">NBA MVP 2013-14</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Force Layout <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="carbon.html">C is for Carbon!</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Sankey Diagram <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="energy.html">Energy</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Bar Graph <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="usshutdown.html">US Shutdown 2013</a></li>
+							<li><a href="nball1314.html">NBA League Leaders 2013-2014</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Bubble Chart <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="sexualsat.html">Sexual Satisfaction per capita GDP</a></li>
+							<li><a href="dots_aapl.html">AAPL Closing Q1</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Line Graph <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="line_07.html">Updating data</a></li>
+							<li><a href="line_06.html">Date format</a></li>
+							<li><a href="line_05.html">Playing with axis tick labels</a></li>
+							<li><a href="line_04.html">Separate axes</a></li>
+							<li><a href="line_03.html">Two independent vars v1</a></li>
+							<li><a href="line_02.html">Zoomed in</a></li>
+							<li><a href="line_01.html">Two independent vars v0</a></li>
+							<li><a href="line_00.html">One independent var</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Testing 123 <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="randarboretum.html">Random Arboretum</a></li>
+							<li><a href="nvd3scatter.html">Scatterplot sample</a></li>
+						</ul>
+					</li>
+				</ul>
+			</aside>
+
+			<!-- content -->
+			<article class="col-lg-9 col-sm-7">
+				<!-- <div class="clearfix visible-xs visible-lg"> -->
+					<h2>NBA Team Stats (2012 - 2013)</h2>
+					<h5>Playoff teams are marked with an asterisk (*)</h5>
+
+					<div class="row-fluid">
+						<div class="charts span8">
+        					<div class="row-fluid">
+        						<div class="bubble-chart span12 col-xs-12 col-sm-6 col-md-8" id="dc-bubble-chart">
+        							<center><h3>Field Goal vs Field Goal Attempts</h3></center>
+        							<center><h5>Bubble size is Team Ranking (the smaller, the better)</h5></center>
+        							<center><h5>Click on a bubble to filter the table below. Click again to reset.</h5></center>
+        						</div>
+        					</div>
+        					<div class="row-fluid">
+        						<div class="span12 table-graph col-xs-12 col-sm-6 col-md-8">
+        							<center><h4>2012-13 NBA Season Selected Summary</h4></center>
+        							<table class="table table-hover table-condensed dc-data-table"  id="dc-data-table">
+        								<thead>
+        									<tr class="header">
+        										<th>RANK</th>
+        										<th>TEAM</th>
+        										<th>FG</th>
+        										<th>FGA</th>
+        										<th>FG%</th>
+        										<th>POINTS</th>
+        										<th>ARENA</th>
+        									</tr>
+        								</thead>	
+        							</table>
+        						</div>
+        					</div>
+						</div> <!-- end charts span8 -->
+						<div class="charts span4">
+        					<div class="row-fluid">
+        						<div class="row-chart span12" id="dc-row-chart">
+        							<center><h3>Points per Team</h3></center>
+        							<center><h5>Hover your mouse on the bars to see total points or click on a bar to filter the bubble chart and table. Click again to reset.</h5></center>
+        						</div>
+        					</div>
+        				</div> <!-- end charts span4 -->
+        			</div> <!-- end first row-fluid -->
+			</article>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<br><br>
+        <p id="dataSource">Dataset sources: <a href="http://www.basketball-reference.com" target="_blank">Basketball-Reference</a> and <a href="http://www.sportmapworld.com">Sport Map World</a></p>
+	</div>
+	
+	<div id="footer">
+			<!-- <div class="col-md-6 col-sm-offset-3"> -->
+				<p>Version 2 | Created 2014 by the Curly Coder unless otherwise stated.</p>
+			<!-- </div> -->
+	</div>
+
+	<script type="text/javascript" src="../js/jquery-1.11.0.js" charset="utf-8"></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js/d3.v3.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="../js/melt.js"></script>
+	<script type="text/javascript" src="../js/crossfilter.js"></script>
+	<script type="text/javascript" src="../js/dc.js"></script>
+    <script type="text/javascript" src="../js/nba1213.js"></script>
+	
+</body>
+</html>

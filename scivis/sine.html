@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/bootstrap.min.css" media="screen">
+	<link rel="stylesheet" href="../css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" href="../css/custom_sciVis.css">
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+	<script src="../js/html5shiv.js"></script>
+	<script src="../js/respond.min.js"></script>
+	<title>curlycoderme</title>
+</head>
+<body>
+	<!-- navigation -->
+	<div class="navbar navbar-fixed-top" role="navigation">
+      	<div class="navbar-header" id="dashboard_00">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <h1 id="first-nav"><a href="../../index.html">curlycoderme</a></h1>
+        </div>
+      	<div class="collapse navbar-collapse">
+	        <ul class="nav navbar-nav second-nav">
+	          <li><a href="../index.html">Home</a></li>
+	          <li><a href="../datavis/datavis.html">Data Vis</a></li>
+	          <li class="active"><a href="scivis.html">Sci Vis</a></li>
+	          <li><a href="../hobbies/photography.html">Hobbies</a></li>
+	          <li><a href="../travel/travel.html">Travel</a></li>
+	          <li><a href="../blog/blog.html">Blog</a></li>
+	          <li><a href="https://github.com/curlycoderme" target="_blank">Github</a></li>
+	          <li><a href="../refs.html">References</a></li>
+	          <li><a href="../contact.html">Contact</a></li>
+	        </ul>
+		</div>
+	</div>
+		
+	<div class="container entry">
+		<!-- sidebar -->
+		<div class="row">
+			<aside class="col-lg-2 col-sm-4">
+				<h3>Science Visualization</h3>
+				<ul class="nav nav-pills nav-stacked">
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Astronomy <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="coloursnightsky.html">Colours in the night sky</a></li>
+							<li><a href="queryingnightsky.html">Querying the night sky</a></li>
+						</ul>
+					</li>
+					<li class="active dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Mathematics <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="orderedchaos.html">Ordered chaos</a></li>
+							<li><a href="fractals.html">Self-similarity in fractals</a></li>
+							<li><a href="cantor.html">The grand Cantor</a></li>
+							<li><a href="fractaltree.html">A fractal tree</a></li>
+							<li><a href="recursivesq.html">Recursive squares</a></li>
+							<li><a href="sine.html">The sine and cosine problem</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Effects <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="noise.html">The subtlety of noise</a></li>
+							<li><a href="fierydots.html">Fiery dots</a></li>
+						</ul>
+					</li>
+				</ul>
+			</aside>
+
+			<article class="col-lg-9 col-sm-7 col-lg-offset-1 col-sm-offset-1">
+				<div class="clearfix visible-xs visible-lg">
+					<h2>The function of sine and cosine</h2>
+        			<br><br>
+        			<p>
+					Then I remember the question of finding the height of a flag pole given a shadow length on the ground and the angle at the end of the shadow to the top of the flagpole. I felt that this is one of those problems that was created for an Algebra lesson instead of the other way around. Unless you have a clinometer, how would you know the <em>'angle at the end of the shadow to the top of the flagpole'</em>? Even if you have one, unless your eyes can go lower than the ground, how can you orient it? I don't know. So I started looking at where else I can use these functions.
+				</p>
+				<p>
+					Sine and Cosine solve the problem of finding the position of an object that moves on a circular path at a <b>constant</b> angular velocity as you can see right below. By relating object P to the angle theta, a position on the Unit Circle is assigned to theta. The x-coordinate of P is the <em>cosine of theta</em> while the y-coordinate of P is referred to as the <em>sine of theta</em>. 
+				</p>
+
+				<script src="../js/processing-1.4.1.js"></script> 
+				<canvas data-processing-sources="../pde/unitCircle.pde"></canvas>
+				
+				<p>
+					As the velocity at which P moves is not changing, this is a very basic application (I'll tweak this one later and hopefully achieve something interesting). Sinusoids, however, can be used to model certain natural behaviours. Sinusoid as a function can be written this way: 
+				</p>
+				<p><em>S(x) = Asin(wx + phi) + B for w > 0</em></p>
+				<br>
+				<p>
+					where
+				</p>
+				<dl>
+					<dt>A</dt>
+						<dd>amplitude, the farthest distance that the sine wave strays from its baseline</dd>
+					
+					<dt>w</dt>
+						<dd>angular frequency, (usually denoted by omega but I'm a bit lazy), associated to the period of the wave</dd>
+					
+					<dt>T = 1/f = 2PI / w</dt>
+						<dd>period, the length of time that a sinusoid can complete one cycle; w is the number of cycles completed over an interval of length 2PI</dd>
+					
+					<dt>phi</dt>
+						<dd>phase, tells us what angle phi corresponds to t=0; how much the sinusoid leads or lags over the unshifted sine function; this is relative</dd>
+					
+					</dl>
+					<p> As an example, based on the website of the <a href="http://aa.usno.navy.mil/data/docs/RS_OneYear.php">US Naval Observatory</a>, the daylight hours that Seattle, Washington's largest city, received on the first day of each month is tabulated below. 
+					</p>
+					<div class="row">
+						<div class="table-responsive col-md-offset-3 col-md-6">
+							<table class="table table-striped">
+								<tr>
+									<th>City</th>
+									<th>Hours</th>
+								</tr>
+								<tr>
+									<td>Jan</td>
+									<td>8.5</td>
+								</tr>
+								<tr>
+									<td>Feb</td>
+									<td>9.6</td>
+								</tr>
+								<tr>
+									<td>Mar
+										<td>11.1</td>
+									</td>
+								</tr>
+								<tr>
+									<td>Apr</td>
+									<td>12.9</td>
+								</tr>
+								<tr>
+									<td>May</td>
+									<td>14.5</td>
+								</tr>
+								<tr>
+									<td>Jun</td>
+									<td>15.8</td>
+								</tr>
+								<tr>
+									<td>Jul</td>
+									<td>15.9</td>
+								</tr>
+								<tr>
+									<td>Aug</td>
+									<td>14.9</td>
+								</tr>
+								<tr>
+									<td>Sep</td>
+									<td>13.4</td>
+								</tr>
+								<tr>
+									<td>Oct</td>
+									<td>11.6</td>
+								</tr>
+								<tr>
+									<td>Nov</td>
+									<td>10</td>
+								</tr>
+								<tr>
+									<td>Dec</td>
+									<td>8.7</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<p>Before finding a sinusoid which models these numbers, let's plot the data. Hover your mouse over the bars, which goes from January to December, to see the values. Axes are not shown.</p>
+					<div class="row seattle" style="margin-left: 150px;"></div>
+					<br>
+					<p>
+					Tracing the peaks of the bars, the data is close to a sinusoid. However, fitting a sinusoid to the data is not an exact science. Constants A, w, phi and B must be calculated so that the function S(t) = A*sin(wt + phi) + B closely resembles the data. S(t) refers to the Seattle's daylight hours received on the first day of every month, 2013.
+					</p>
+					<p>
+						B determines the starting point. Regular sinusoids will have a vertical shift that is the average of the minimum and maximum values. Based on the data, B = (8.5 +15.9)/2 = 12.2. 
+					</p>
+					<p>
+						We then find the amplitude A. This is the displacement from the starting point to the minimum and maximum values. A = 15.9 - 12.2 = 3.7.
+					</p>
+					<p>
+						We now plugin values of A and B to S(t) which will give us 3.7 * sin(wt + phi) + 12.2.
+					</p>
+					<p>
+						Next step is to find the angular frequency w. Since the data is collected over a year, the period T is 12 months. w is related to the period by w = 2PI / T. Hence, angular frequency is PI/6.
+					</p>
+					<p>
+						The final quantity to find is the phase <em>phi</em>. As A is greater than 0, the phase shift corresponds to the first value of t with Seattle(t) = 12.2. April's 12.9 is closer to 12.2 than the previous value 11.1. Thus, our t is 4 making our -phi/w = 4; so, phi = -4w = -4(PI/6) = -2PI/3. Feeding this in our original equation this gives us 
+					</p>
+					<p>
+						S(t) = 3.7 * sin((PI/6)*t - (2PI/3)) + 12.2.
+					</p>
+					<p>
+						Please check the <a href="../refs.html">References</a> page for more info. Shown below is the sinusoid which models the data. Disclaimer: A sinusoid regression from a calculator might be better than this and there's no model validation done. Note that the curve has been scaled to suit window height.
+					</p>
+					<script src="../js/processing-1.4.1.js"></script> 
+					<center><canvas data-processing-sources="../pde/sinusoidalModel.pde"></canvas></center>
+					<br><br>
+					<p>
+						Before I close, let me leave my artsy fartsy sinusoids.
+					</p>
+					<script src="../js/processing-1.4.1.js"></script> 
+					<canvas data-processing-sources="../pde/basicSinWave.pde"></canvas>
+					<br>
+					<br>
+		            
+				</div>
+			</article>
+		</div> <!-- end row -->
+		
+
+	</div> <!-- end container -->
+	<br><br>
+	<div id="footer" class="entryfooter">
+		<div class="col-md-10 col-md-offset-1">
+			<p>Version 2 | Created 2014 by the Curly Coder unless otherwise stated.</p>
+		</div>
+	</div>
+
+	<script src="../js/jquery-1.11.0.js" type="text/javascript"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/d3.v3.min.js"></script>
+	<script src="../js/seattle.js"></script>
+	
+</body>
+</html>

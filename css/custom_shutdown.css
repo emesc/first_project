@@ -1,0 +1,38 @@
+/**********************************
+**
+** =bar graph
+**
+***********************************/
+
+.bar {
+  fill: #104E8B;
+}
+
+.bar:hover {
+  fill: #D43D1A;
+}
+
+.titleBar, .titleBar:hover {
+	fill: #BCD2EE;
+	cursor: pointer;
+}
+
+.title{
+	font: bold 3em 'Montserrat', 'PT Sans', sans-serif, Helvetica;
+}
+
+.axis {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+

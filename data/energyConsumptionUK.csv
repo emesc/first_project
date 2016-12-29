@@ -1,0 +1,150 @@
+Sector,source,target,value
+Domestic,Space heating,Gas,22540.0
+Domestic,Space heating,Oil,2281.0
+Domestic,Space heating,Solid fuel,666.0
+Domestic,Space heating,Electricity,2098.0
+Domestic,Space heating,Heat sold1,52.0
+Domestic,Space heating,Bioenergy & Waste1,669.0
+Domestic,Water heating,Gas,6004.0
+Domestic,Water heating,Oil,425.0
+Domestic,Water heating,Solid fuel,42.0
+Domestic,Water heating,Electricity,650.0
+Domestic,Cooking/catering,Gas,612.0
+Domestic,Cooking/catering,Electricity,503.0
+Domestic,Heat total,Gas,29156.0
+Domestic,Heat total,Oil,2705.0
+Domestic,Heat total,Solid fuel,709.0
+Domestic,Heat total,Electricity,3251.0
+Domestic,Heat total,Heat sold1,52.0
+Domestic,Heat total,Bioenergy & Waste1,669.0
+Domestic,Lighting and appliances,Electricity,6611.0
+Service,Space heating,Gas,6244.0
+Service,Space heating,Oil,831.0
+Service,Space heating,Solid fuel,13.0
+Service,Space heating,Electricity,1192.0
+Service,Space heating,Heat sold1,301.0
+Service,Space heating,Bioenergy & Waste1,121.0
+Service,Water heating,Gas,1206.0
+Service,Water heating,Oil,87.0
+Service,Water heating,Solid fuel,3.0
+Service,Water heating,Electricity,295.0
+Service,Water heating,Heat sold1,55.0
+Service,Water heating,Bioenergy & Waste1,14.0
+Service,Cooking/catering,Gas,656.0
+Service,Cooking/catering,Oil,35.0
+Service,Cooking/catering,Solid fuel,0.0
+Service,Cooking/catering,Electricity,1114.0
+Service,Cooking/catering,Heat sold1,23.0
+Service,Cooking/catering,Bioenergy & Waste1,1.0
+Service,Heat total,Gas,8106.0
+Service,Heat total,Oil,954.0
+Service,Heat total,Solid fuel,16.0
+Service,Heat total,Electricity,2601.0
+Service,Heat total,Heat sold1,379.0
+Service,Heat total,Bioenergy & Waste1,136.0
+Service,Computing,Electricity,505.0
+Service,Cooling and ventilation,Gas,23.0
+Service,Cooling and ventilation,Electricity,741.0
+Service,Cooling and ventilation,Heat sold1,0.0
+Service,Lighting,Electricity,3405.0
+Service,Other,Gas,134.0
+Service,Other,Oil,10.0
+Service,Other,Electricity,1096.0
+Service,Other,Heat sold1,7.0
+Industry,Space heating,Gas,1133.0
+Industry,Space heating,Oil,83.0
+Industry,Space heating,Solid fuel,75.0
+Industry,Space heating,Electricity,656.0
+Industry,Space heating,Heat sold1,795.0
+Industry,Space heating,Bioenergy & Waste1,487.0
+Industry,High temperature process,Gas,1973.0
+Industry,High temperature process,Oil,91.0
+Industry,High temperature process,Solid fuel,989.0
+Industry,High temperature process,Electricity,951.0
+Industry,Low temperature process,Gas,3780.0
+Industry,Low temperature process,Oil,570.0
+Industry,Low temperature process,Solid fuel,183.0
+Industry,Low temperature process,Electricity,1436.0
+Industry,Drying/separation,Gas,1387.0
+Industry,Drying/separation,Oil,167.0
+Industry,Drying/separation,Solid fuel,109.0
+Industry,Drying/separation,Electricity,524.0
+Industry,Heat total,Gas,8273.0
+Industry,Heat total,Oil,911.0
+Industry,Heat total,Solid fuel,1356.0
+Industry,Heat total,Electricity,3567.0
+Industry,Heat total,Heat sold1,795.0
+Industry,Heat total,Bioenergy & Waste1,487.0
+Industry,Motors,Electricity,2788.0
+Industry,Compressed air,Electricity,793.0
+Industry,Lighting,Electricity,242.0
+Industry,Refrigeration,Electricity,482.0
+Industry,Other,Gas,1106.0
+Industry,Other,Oil,149.0
+Industry,Other,Solid fuel,146.0
+Industry,Other,Electricity,411.0
+Transport,Non-heat purposes,Oil,51927.0
+Transport,Non-heat purposes,Solid fuel,12.0
+Transport,Non-heat purposes,Electricity,352.0
+Transport,Non-heat purposes,Bioenergy & Waste1,958.0
+Total,Space heating,Gas,29917.0
+Total,Space heating,Oil,3195.0
+Total,Space heating,Solid fuel,755.0
+Total,Space heating,Electricity,3946.0
+Total,Space heating,Heat sold1,1148.0
+Total,Space heating,Bioenergy & Waste1,1277.0
+Total,Water heating,Gas,7210.0
+Total,Water heating,Oil,512.0
+Total,Water heating,Solid fuel,45.0
+Total,Water heating,Electricity,945.0
+Total,Water heating,Heat sold1,55.0
+Total,Water heating,Bioenergy & Waste1,14.0
+Total,Cooking/catering,Gas,1268.0
+Total,Cooking/catering,Oil,35.0
+Total,Cooking/catering,Solid fuel,0.0
+Total,Cooking/catering,Electricity,1618.0
+Total,Cooking/catering,Heat sold1,23.0
+Total,Cooking/catering,Bioenergy & Waste1,1.0
+Total,Process use,Gas,5753.0
+Total,Process use,Oil,661.0
+Total,Process use,Solid fuel,1172.0
+Total,Process use,Electricity,2387.0
+Total,Drying/separation,Gas,1387.0
+Total,Drying/separation,Oil,167.0
+Total,Drying/separation,Solid fuel,109.0
+Total,Drying/separation,Electricity,524.0
+Total,Heat total,Gas,45535.0
+Total,Heat total,Oil,4570.0
+Total,Heat total,Solid fuel,2081.0
+Total,Heat total,Electricity,9419.0
+Total,Heat total,Heat sold1,1226.0
+Total,Heat total,Bioenergy & Waste1,1292.0
+Total,Computing,Electricity,505.0
+Total,Cooling and ventilation,Gas,23.0
+Total,Cooling and ventilation,Electricity,741.0
+Total,Cooling and ventilation,Heat sold1,0.0
+Total,Lighting and appliances,Electricity,10257.0
+Total,Motors,Electricity,2788.0
+Total,Compressed air,Electricity,793.0
+Total,Refrigeration,Electricity,482.0
+Total,Other,Gas,1239.0
+Total,Other,Oil,159.0
+Total,Other,Solid fuel,146.0
+Total,Other,Electricity,1507.0
+Total,Other,Heat sold1,7.0
+Total,Transport,Oil,51927.0
+Total,Transport,Solid fuel,12.0
+Total,Transport,Electricity,352.0
+Total,Transport,Bioenergy & Waste1,958.0
+Total,Non-heat total,Gas,1262.0
+Total,Non-heat total,Oil,52086.0
+Total,Non-heat total,Solid fuel,158.0
+Total,Non-heat total,Electricity,17426.0
+Total,Non-heat total,Heat sold1,7.0
+Total,Non-heat total,Bioenergy & Waste1,958.0
+Total,Overall total excluding transport,Gas,46797.0
+Total,Overall total excluding transport,Oil,4729.0
+Total,Overall total excluding transport,Solid fuel,2227.0
+Total,Overall total excluding transport,Electricity,26494.0
+Total,Overall total excluding transport,Heat sold1,1233.0
+Total,Overall total excluding transport,Bioenergy & Waste1,1292.0

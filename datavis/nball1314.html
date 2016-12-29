@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/bootstrap.min.css" media="screen">
+	<link rel="stylesheet" href="../css/custom_dataVis.css">
+	<link rel="stylesheet" href="../css/custom_nball1314.css">
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+	<script src="../js/html5shiv.js"></script>
+	<script src="../js/respond.min.js"></script>
+	<title>curlycoderme</title>
+</head>
+<body>
+	<script type="text/javascript" src="../js/d3.v3.min.js" charset="utf-8"></script>
+	<div class="container-fluid">
+		<!-- navigation -->
+		<nav class="navbar navbar-fixed-top" role="navigation">
+	      	<div class="navbar-header" id="dashboard_00">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <h1 id="first-nav"><a href="../../index.html">curlycoderme</a></h1>
+            </div>
+	      	<div class="collapse navbar-collapse">
+		        <ul class="nav navbar-nav second-nav">
+		          <li><a href="../index.html">Home</a></li>
+		          <li class="active"><a href="datavis.html">Data Vis</a></li>
+		          <li><a href="../scivis/scivis.html">Sci Vis</a></li>
+		          <li><a href="../hobbies/photography.html">Hobbies</a></li>
+		          <li><a href="../travel/travel.html">Travel</a></li>
+		          <li><a href="../blog/blog.html">Blog</a></li>
+		          <li><a href="https://github.com/curlycoderme" target="_blank">Github</a></li>
+		          <li><a href="../refs.html">References</a></li>
+		          <li><a href="../contact.html">Contact</a></li>
+		        </ul>
+			</div>
+		</nav>
+		
+		<!-- sidebar -->
+		<div class="row">
+			<aside class="col-lg-2 col-sm-4">
+				<h3>Data Visualization</h3>
+				<ul class="nav nav-pills nav-stacked">
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dashboards <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="tropicaldata1213.html">Western Pacific: Tropical Data 2013</a></li>
+							<li><a href="aaa.html">Aviation accidents and incidents</a></li>
+							<li><a href="nba1213.html">NBA Team Stats (2012-2013)</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Geomaps <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="usco2emissions.html">US CO2 Emissions</a></li>
+							<li><a href="countriescodes.html">Countries, codes and pops</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Multidimensional Plot <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="mvp1314.html">NBA MVP 2013-14</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Force Layout <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="carbon.html">C is for Carbon!</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Sankey Diagram <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="energy.html">Energy</a></li>
+						</ul>
+					</li>
+					<li class="active dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Bar Graph <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="usshutdown.html">US Shutdown 2013</a></li>
+							<li><a href="nball1314.html">NBA League Leaders 2013-2014</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Bubble Chart <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="sexualsat.html">Sexual Satisfaction per capita GDP</a></li>
+							<li><a href="dots_aapl.html">AAPL Closing Q1</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Line Graph <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="line_07.html">Updating data</a></li>
+							<li><a href="line_06.html">Date format</a></li>
+							<li><a href="line_05.html">Playing with axis tick labels</a></li>
+							<li><a href="line_04.html">Separate axes</a></li>
+							<li><a href="line_03.html">Two independent vars v1</a></li>
+							<li><a href="line_02.html">Zoomed in</a></li>
+							<li><a href="line_01.html">Two independent vars v0</a></li>
+							<li><a href="line_00.html">One independent var</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Testing 123 <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="randarboretum.html">Random Arboretum</a></li>
+							<li><a href="nvd3scatter.html">Scatterplot sample</a></li>
+						</ul>
+					</li>
+				</ul>
+			</aside>
+
+			<!-- content -->
+			<article class="col-lg-9 col-sm-7 col-lg-offset-1 col-sm-offset-1 art">
+				<!-- <div class="clearfix visible-sm visible-lg"> -->
+					<h2>NBA Summary 2013-2014</h2>
+        			<h4>League Leaders by PPG</h4>
+        			<h6>Format: Ranking. Player, Position (Team, PPG)</h6>
+        			<br>
+					<div class="control-sort">
+						<button onclick="sort()" type="button" class="btn btn-success btn-sm">
+        					PPG (Highest-Lowest)
+        				</button>
+        				<button onclick="sort(compareByTeam)" type="button" class="btn btn-success btn-sm">
+        					Sort by Team
+        				</button>
+        				<button onclick="sort(compareByPointsPerGame)" type="button" class="btn btn-success btn-sm">
+        					PPG (Lowest-Highest)
+        				</button>
+        			</div>
+        			<br>
+					<script>
+						var data = [
+							{"RK":1, "PLAYER":"Kevin Durant, SF", "TEAM":"OKC", "PTS":29.6},
+						  {"RK":2, "PLAYER":"LeBron James, SF", "TEAM":"MIA", "PTS":27.1},
+						  {"RK":3, "PLAYER":"James Harden, SG", "TEAM":"HOU", "PTS":26.8},
+						  {"RK":4, "PLAYER":"Russell Westbrook, PG", "TEAM":"OKC", "PTS":26.7},
+						  {"RK":5, "PLAYER":"LaMarcus Aldridge, PF", "TEAM":"POR", "PTS":26.2},
+						  {"RK":6, "PLAYER":"Dwight Howard, C", "TEAM":"HOU", "PTS":26},
+						  {"RK":7, "PLAYER":"DeMar DeRozan, SG", "TEAM":"TOR", "PTS":23.9},
+						  {"RK":8, "PLAYER":"Blake Griffin, PF", "TEAM":"LAC", "PTS":23.5},
+						  {"RK":9, "PLAYER":"Stephen Curry, PG", "TEAM":"GS", "PTS":23},
+						  {"RK":10, "PLAYER":"Damian Lillard, PG", "TEAM":"POR", "PTS":22.9},
+						  {"RK":11, "PLAYER":"Paul George, SF", "TEAM":"IND", "PTS":22.6},
+						  {"RK":12, "PLAYER":"Joe Johnson, SG", "TEAM":"BKN", "PTS":21.2},
+						  {"RK":13, "PLAYER":"Kyle Lowry, PG", "TEAM":"TOR", "PTS":21.1},
+						  {"RK":14, "PLAYER":"Monta Ellis, SG", "TEAM":"DAL", "PTS":20.4},
+						  {"RK":15, "PLAYER":"Chris Paul, PG", "TEAM":"LAC", "PTS":19.8},
+						  {"RK":16, "PLAYER":"Kemba Walker, PG", "TEAM":"CHA", "PTS":19.5},
+						  {"RK":17, "PLAYER":"Paul Millsap, PF", "TEAM":"ATL", "PTS":19.4},
+						  {"RK":18, "PLAYER":"Chandler Parsons, SF", "TEAM":"HOU", "PTS":19.3},
+						  {"RK":19, "PLAYER":"Jeff Teague, PG", "TEAM":"ATL", "PTS":19.3},
+						  {"RK":20, "PLAYER":"Bradley Beal, SG", "TEAM":"WSH", "PTS":19.2},
+						  {"RK":21, "PLAYER":"Dirk Nowitzki, PF", "TEAM":"DAL", "PTS":19.1},
+						  {"RK":22, "PLAYER":"Dwyane Wade, SG", "TEAM":"MIA", "PTS":18.7},
+						  {"RK":23, "PLAYER":"Al Jefferson, C", "TEAM":"CHA", "PTS":18.7},
+						  {"RK":24, "PLAYER":"Taj Gibson, PF", "TEAM":"CHI", "PTS":18.2},
+						  {"RK":25, "PLAYER":"Zach Randolph, PF", "TEAM":"MEM", "PTS":18.2},
+						  {"RK":26, "PLAYER":"Marc Gasol, C", "TEAM":"MEM", "PTS":17.3},
+						  {"RK":27, "PLAYER":"Tony Parker, PG", "TEAM":"SA", "PTS":17.2},
+						  {"RK":28, "PLAYER":"Tim Duncan, PF", "TEAM":"SA", "PTS":16.5},
+						  {"RK":29, "PLAYER":"Klay Thompson, SG", "TEAM":"GS", "PTS":16.4},
+						  {"RK":30, "PLAYER":"John Wall, PG", "TEAM":"WSH", "PTS":16.3},
+						  {"RK":31, "PLAYER":"Mike Conley, PG", "TEAM":"MEM", "PTS":15.9},
+						  {"RK":32, "PLAYER":"Jamal Crawford, SG", "TEAM":"LAC", "PTS":15.5},
+						  {"RK":33, "PLAYER":"Chris Bosh, C", "TEAM":"MIA", "PTS":15.2},
+						  {"RK":34, "PLAYER":"Nicolas Batum, SF", "TEAM":"POR", "PTS":15.2},
+						  {"RK":35, "PLAYER":"David West, PF", "TEAM":"IND", "PTS":15.1},
+						  {"RK":36, "PLAYER":"Wesley Matthews, SG", "TEAM":"POR", "PTS":14.5},
+						  {"RK":37, "PLAYER":"Deron Williams, PG", "TEAM":"BKN", "PTS":14.5},
+						  {"RK":38, "PLAYER":"Manu Ginobili, SG", "TEAM":"SA", "PTS":14.3},
+						  {"RK":39, "PLAYER":"David Lee, PF", "TEAM":"GS", "PTS":13.9},
+						  {"RK":40, "PLAYER":"Nene Hilario, PF", "TEAM":"WSH", "PTS":13.7}
+						];
+						function render(data, comparator){
+						            d3.select(".art").selectAll("div.h-bar")
+						                    .data(data)
+						                .enter().append("div")
+						                    .attr("class", "h-bar")
+						                    .append("span");
+
+						            d3.select(".art").selectAll("div.h-bar")
+						                    .data(data)
+						                .exit().remove();
+
+						            d3.select(".art").selectAll("div.h-bar")
+						                    .data(data)
+						                .attr("class", "h-bar")
+						                .style("width", function(d){ return (d.PTS*20) + "px"; })
+						                .select("span")
+						                    .text(function(d){ return d.RK + ". " + d.PLAYER + " (" + d.TEAM + ", " + d.PTS + ")"; });
+
+						            if(comparator)
+						                d3.select(".art").selectAll("div.h-bar")
+						                    .sort(comparator);
+						        }
+						        var compareByTeam = function(a, b){
+						            return a.TEAM < b.TEAM ? -1 : 1;
+						        };
+						        var compareByPointsPerGame = function(a, b){
+						            return a.PTS < b.PTS ? -1 : 1;
+						        };
+						        render(data);
+
+						        function sort(comparator){
+						            render(data, comparator);
+						        }
+					</script>
+				<!-- </div> -->		
+			</article>
+			
+		</div>
+	</div>
+	<div class="container-fluid">
+		<br><br>
+        <p id="dataSource">Dataset source: <a href="http://espn.go.com/nba/statistics/player/_/stat/scoring-per-game" target="_blank">ESPN NBA</a></p>
+	</div>
+
+	<div id="footer">
+		<div class="container">
+			<!-- <div class="col-md-6 col-sm-offset-3"> -->
+				<p>Version 2 | Created 2014 by the Curly Coder unless otherwise stated.</p>
+			<!-- </div> -->
+		</div>
+	</div>
+
+	<script type="text/javascript" src="../js/jquery-1.11.0.js" charset="utf-8"></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js/d3.v3.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="../js/melt.js"></script>
+	<script type="text/javascript" src="../js/crossfilter.js"></script>
+	<script type="text/javascript" src="../js/dc.js"></script>
+    <script type="text/javascript" src="../js/nball1314.js"></script>
+
+	
+	
+</body>
+</html>

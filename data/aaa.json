@@ -1,0 +1,147 @@
+[
+  {
+    "aircraft":"Airbus A300",
+    "accidents":32,
+    "fatalities":1436
+  },
+  {
+    "aircraft":"Airbus A310",
+    "accidents":8,
+    "fatalities":700
+  },
+  {
+    "aircraft":"Airbus A320",
+    "accidents":20,
+    "fatalities":636
+  },
+  {
+    "aircraft":"Airbus A321",
+    "accidents":2,
+    "fatalities":152
+  },
+  {
+    "aircraft":"Airbus A330",
+    "accidents":6,
+    "fatalities":338
+  },
+  {
+    "aircraft":"Airbus A340",
+    "accidents":4,
+    "fatalities":0
+  },
+  {
+    "aircraft":"ATR 42/72",
+    "accidents":33,
+    "fatalities":416
+  },
+  {
+    "aircraft":"Boeing 737",
+    "accidents":136,
+    "fatalities":4186
+  },
+  {
+    "aircraft":"Boeing 737 Next Gen",
+    "accidents":13,
+    "fatalities":527
+  },
+  {
+    "aircraft":"Boeing 747",
+    "accidents":46,
+    "fatalities":3709
+  },
+  {
+    "aircraft":"Boeing 757",
+    "accidents":8,
+    "fatalities":572
+  },
+  {
+    "aircraft":"Boeing 767",
+    "accidents":12,
+    "fatalities":851
+  },
+  {
+    "aircraft":"Boeing 777",
+    "accidents":3,
+    "fatalities":3
+  },
+  {
+    "aircraft":"BAe 146/Avro RJ",
+    "accidents":12,
+    "fatalities":227
+  },
+  {
+    "aircraft":"Beech 1900D",
+    "accidents":1,
+    "fatalities":19
+  },
+  {
+    "aircraft":"Canadair Regional Jet",
+    "accidents":10,
+    "fatalities":162
+  },
+  {
+    "aircraft":"McDonnell Douglas DC-10",
+    "accidents":19,
+    "fatalities":509
+  },
+  {
+    "aircraft":"Dash 8",
+    "accidents":4,
+    "fatalities":77
+  },
+  {
+    "aircraft":"Embraer 120 Brasilia",
+    "accidents":4,
+    "fatalities":48
+  },
+  {
+    "aircraft":"Embraer 135/145",
+    "accidents":6,
+    "fatalities":22
+  },
+  {
+    "aircraft":"Embraer 190/195",
+    "accidents":3,
+    "fatalities":75
+  },
+  {
+    "aircraft":"Fokker 70/100",
+    "accidents":7,
+    "fatalities":179
+  },
+  {
+    "aircraft":"Fokker 50",
+    "accidents":2,
+    "fatalities":7
+  },
+  {
+    "aircraft":"Lockheed L-1011 TriStar",
+    "accidents":6,
+    "fatalities":233
+  },
+  {
+    "aircraft":"McDonnell Douglas MD-11",
+    "accidents":9,
+    "fatalities":237
+  },
+  {
+    "aircraft":"McDonnell Douglas MD-80/90",
+    "accidents":23,
+    "fatalities":1150
+  },
+  {
+    "aircraft":"Saab 340",
+    "accidents":2,
+    "fatalities":0
+  },
+  {
+    "aircraft":"Concorde",
+    "accidents":1,
+    "fatalities":109
+  },
+  {
+    "aircraft":"Sukhoi SuperJet 100",
+    "accidents":1,
+    "fatalities":45
+  }
+]
