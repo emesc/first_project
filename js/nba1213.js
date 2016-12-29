@@ -1,5 +1,5 @@
 // load data from json file
-d3.json("../../data/nba1213.json", function(error, nba1213_data){
+d3.json("../data/nba1213.json", function(error, nba1213_data){
 
 	// create dc charts and link to divs
 	var bubbleChart = dc.bubbleChart("#dc-bubble-chart"),

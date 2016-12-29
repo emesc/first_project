@@ -1,5 +1,5 @@
 // load data from file
-d3.json("../../data/tropicaldata1213.json", function(error, tropical_data){
+d3.json("../data/tropicaldata1213.json", function(error, tropical_data){
 	var yearChart = dc.pieChart("#dc-year-chart"),
 		statChart = dc.pieChart("#dc-stat-chart"),
 		categoryChart = dc.barChart("#dc-category-chart"),
